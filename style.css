@@ -1,0 +1,103 @@
+body{
+     background-color: blueviolet;
+    color: black;
+}
+
+header {
+    height: 150px;
+    background-image: linear-gradient(to right, (blueviolet, white));
+
+}
+
+header h1 {
+    font-family:'Times New Roman', Times, serif
+}
+
+
+.error-msg {
+    color:red;
+    text-align:center;
+}
+
+.uvi-low{
+    background-color: rgb(green, blue);
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.uvi-mid {
+    background-color: aqua;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.uvi-vhigh {
+    background-color: cornflowerblue;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.uvi-high {
+    background-color: darkslategray;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.card {
+    border: none;
+    background-color: transparent
+    height: 165px;
+}
+
+.card-body {
+    background-color:rgb(10, 63, 163);
+    border- 2px solid black;
+    border-radius: 20px;
+    padding: 7px;
+    box-shadow: 5px 5px 3px grey;
+}
+
+.card-title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.card-icon {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#current-weather {
+    background-color: white;
+    border: 3px solid coral;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px grey;
+}
+
+#current-icon {
+    text-align: center;
+}
+
+#current-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.search-btn {
+    color:brown;
+    background-color:rgb(green, blue);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.search-btn:hover {
+    background-color: blueviolet;
+}
+
+@media (min-width: 1200px) {
+    .col-9. row {
+        margin-right: -15px!important;
+    }
+}

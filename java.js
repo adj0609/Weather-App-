@@ -1,5 +1,6 @@
 //api variables
-var key = confi.API_KEY;
+var key = config.js;
+$get.JSON()
 const weatherIconE1 = document.querySelectory("#weather-icon");
 const searchFormE1 = document.querySelector("#search-form");
 const searchInputE1 = document.querySelector("#city-search");
@@ -26,10 +27,10 @@ let formSubmitHandler = function(event) {
     }
 }
 
-//Turning CityName and creating lat and lon coordinates
+//reTurning CityName and creating lat and lon coordinates
 let getCoorinates = function(cityName) {
-    let apiUrl = "https://api.openweathermap.org/data/2.5/onecall?=" + cityName + "&limit=1&appid=" + key
-    fetch(apiURL)
+    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&limit=1&appid=" + key
+    fetch('apiURL')
     .then(function(res) {
         errorContainerE1.innerHTML = ""
         return res.json();
@@ -40,7 +41,7 @@ let getCoorinates = function(cityName) {
         getWeather(lat, Lon)
     })
     //city name not valid
-    .catch(function(error) {
+    .catch(function(_error) {
         errorConatinerE1.innerHTML = "Please enter a valid city name!";
         return;
     })
@@ -48,7 +49,7 @@ let getCoorinates = function(cityName) {
 
     //Sending coordinates to OpenWeather
 let getWeather = function(lat, lon) {
-    let apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" +lat + "lon=" + lon + "units=imperial&appid=" + key
+    let apiUrl = "https://api.openweathermap.org/data/2.5/onecall?=" +lat + "lon=" + lon + "units=imperial&appid=" + c71883594b67d29455c08ae9eaa0149d
     fetch(apiURL)
     .then(function(res) {
         if (res.ok) {
@@ -165,4 +166,4 @@ let reSearch = function(event) {
 loadSearch();
 searchFormE1.addEventLinstener("submit", formSubmitHandler);
 clearButtonE1.addEventListener("click", clearHistory);
-searchContainerE1.addEventListener("click, reSearch);
+searchContainerE1.addEventListener("click", reSearch);
